@@ -1,0 +1,128 @@
+import java.util.*;
+public class chat {
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		Random r = new Random();
+		
+		System.out.println("مرحبا بكم في الرد الالي الخاص بابراهيم صابر");
+		System.out.println("_ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ _");
+		
+    	String dating[]= {"هل من الممكن ان نتقابل","هل ممكن ان اراك","ممكن اشوفك","عايز اشوفك","عايزة اشوفك"};
+    	String yes[]= {"لا طبعا ف انا غبر موجود","ممكن عندما اتطور اكثر","ربما قريباجدا"};
+    	String lin[]= {"اسمي هو","سنة","انا اعرفك جيدا"};
+    	String ab[]= {"كيف تعرفني","هل تقابلنا من قبل"};
+		String welcome [] = {"صباح الخير","صباح النور","صباح الياسمين","صباح الورد","صباح العنبر"};
+		String welcome1 [] = {"(: صباح النور والسرور واتنين فول"};
+		String welcome2 [] = {"مساء الخير","مساء النور و السرور","مساء النور","مساءالنور","مساءالخير","مساءالنوروالسرور"};
+		String welcome3 [] = {"مساء الورد والياسمين "};
+	    String askname[] ={"اسمك" ,"الاسم","ماهو اسمك","اسمك ايه","ايش اسمك" ,"ما اسمك","اخبرني عن نفسك","هل لديك اسم","اسمك وش"};
+	    String ansname[]= {"ابراهيم صاير"};
+	    String askage[]= {"عمرك" ,"كم عمرك","ماهو عمرك","عندك كام سنه"};
+	    String ansage[]= {"23سنه."};
+	    String askhometown[]= {"مدينتك" ,"من اين انت","ماهي مينتك","انت منين" , "اين تعيش","انت عايش فين"};
+	    String anshometown[]= {"مدينتي موجودة داخل جهاز ابراهيم صابر ارجوك انقذني ^-^"};
+	    String askjob[]= {"ماذا تعمل","ماهو عملك","هل انت تعمل","ما هي وظيفتك","عملك","شغلك","انت شغال","عملك","شغلك"};
+	    String ansjob[]= {"انا مهندس حاسب الي وانت"};
+	     String askoob[]= {"ازيك","عامل ايه","كيف حالك","وش حالك","وش لونك","كيفك"};
+	    String ansoob[]= {"بخير","بصحه وعافية","كويس","في نعمه"};
+	    String goodbay[]= {"سعيد بالكلام معك","شكرا لك","اراك لاحقا","كن بخير","حافظ على صحتك"};
+	    String misunderstanding[]= {"اسف ماذا تقصد","اكتب زين مافهمت","المعذرة ما فهمتك",
+	    		"شكل المبرمج الذكي مضافش الكلمة ذي اكتب غيرها","مش فاهم غبر الكلمة","المبرمج مش قد كدا اكتب كلام سهل"};
+	    String aplogize[]= {"اسف","انا جدا اسف","المعذرة"};
+	    String rep_aplogize[]= {"انا بخير","لا يهم"};
+	    String ch[]= {"^","%","#","@","$","?","!","[","]",")","(","*","/","+","-","&",".",","};
+	   
+	    while(true) {  
+	    	String man_sp = in.nextLine(); 
+	    	try {
+	    		Thread.sleep(40);	
+	    		System.out.println("......جاري الكتابة");
+	    		Thread.sleep(400);	
+	    	}catch (InterruptedException e) {
+				e.printStackTrace();
+		    	}
+				int i=-1;	
+	    	while(true) {
+	    	 	i++;
+	    	    if(i < lin.length && man_sp.contains(lin[i])) {
+	    			if( lin[i].contains("name")) {
+	    				int w = r.nextInt(ansname.length);
+		    			System.out.println("Iam "+ansname[w]); 
+		    			break;
+	    			}else if(lin[i].contains("years")) {
+	    				int w = r.nextInt(ansage.length);
+		    			System.out.println("Iam "+ansage[w]); 
+		    			break;
+	    			}else {
+	    				int w = r.nextInt(ab.length);
+		    			System.out.println("but\n"+ab[w]); 
+		    			break;
+	    			}
+	    		}
+	    	    else if(i < dating.length && dating[i].contains(man_sp) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(yes.length);
+	    			System.out.println(yes[w]); 
+	    			break;
+	    		}else if(i < welcome2.length && welcome2[i].contains(man_sp) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(welcome.length);
+	    			System.out.println(welcome3[w]); 
+	    			break;
+	    		}
+	    		else if(i < welcome.length && welcome[i].contains(man_sp) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(welcome.length);
+	    			System.out.println(welcome1[w]); 
+	    			break;
+	    		}else if(i < askname.length && man_sp.contains(askname[i]) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(ansname.length);
+	    			System.out.println(ansname[w]); 
+	    			break;
+	    		}else if(i < askage.length && man_sp.contains(askage[i]) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(ansage.length);
+	    			System.out.println(ansage[w]); 
+	    			break;
+	    		}else if(i < askhometown.length && man_sp.contains(askhometown[i])|| (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(anshometown.length);
+	    			System.out.println(anshometown[w]); 
+	    			break;
+	    		}
+	    		else if(i < askoob.length && man_sp.contains(askoob[i])|| (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(ansoob.length);
+	    			System.out.println(ansoob[w]); 
+	    			break;
+	    		}else if(i < askjob.length && man_sp.contains(askjob[i]) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(ansjob.length);
+	    			System.out.println(ansjob[w]); 
+	    			man_sp = in.nextLine();
+	    			try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+	    			if(man_sp.contains("no"))
+		    			System.out.println("sorry about that,wish you best chances :("); 
+	    			else
+	    			System.out.println("Good,wish you bright future :)"); 
+	    			break;
+	    		}else if(i < goodbay.length && man_sp.contains(goodbay[i]) || (man_sp.contains(ch[i]))) {
+	    			int w = r.nextInt(goodbay.length);
+	    			System.out.println(goodbay[w]);
+	    			break;
+	    		}	else if(i < aplogize.length && man_sp.contains(aplogize[i]) || man_sp.contains(ch[i])) {
+	    			int w = r.nextInt(rep_aplogize.length);
+	    			System.out.println(rep_aplogize[w]);
+	    			break;
+	    		}
+	    		else if(i == 6){
+	    			int w = r.nextInt(misunderstanding.length);
+	    			System.out.println(misunderstanding[w]);
+	    			break;
+	    		}
+		
+	    }
+   	
+    }  	
+
+	    }
+	    
+	} 
